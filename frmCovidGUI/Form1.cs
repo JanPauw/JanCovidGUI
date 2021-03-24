@@ -30,6 +30,7 @@ namespace frmCovidGUI
         {
             setHospitalinfo(Hospital);
             displayHopitalInfo(Hospital);
+            clearHospitalInputs();
             pnlAddPatient.Visible = true;
         }
 
@@ -48,8 +49,6 @@ namespace frmCovidGUI
                     i.BType = false;
                     break;
             }
-
-            clearHospitalInputs();
         }
 
         private void clearHospitalInputs()
@@ -76,6 +75,8 @@ namespace frmCovidGUI
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
             setPatientDetails(Hospital);
+            loadPatients(Hospital);
+            clearPatientInputs();
         }
 
         private void clearPatientInputs()
@@ -91,6 +92,22 @@ namespace frmCovidGUI
             cbxHadCovid.Checked = false;
         }
 
+        private void loadPatients(info i)
+        {
+            lbxPatientInfo.Items.Clear();
+            for (int x = 0; x < i.ArraySize; x++)
+            {
+                lbxPatientInfo.Items.Add("Patient Name and ID: " + i.StrName[x] + " " + i.StrSurname + "\t" + i.StrID[x]);
+                lbxPatientInfo.Items.Add("Medical Aid: " + i.StrMedAid[x]);
+                lbxPatientInfo.Items.Add("Blood Type:" + i.CBloodType[x]);
+                lbxPatientInfo.Items.Add("Referring Dr: " + i.StrRefDoc[x]);
+                lbxPatientInfo.Items.Add("Allergies: " + i.StrAllergies[x]);
+                lbxPatientInfo.Items.Add("Vaccine: " + i.StrVaccine[x]);
+                lbxPatientInfo.Items.Add("Patient had COVID-19: " + i.BHasCovid.ToString()[x]);
+                lbxPatientInfo.Items.Add("=====================================");
+            }
+        }
+
         private void setPatientDetails(info i)
         {
             string strID = edtPID.Text;
@@ -103,6 +120,7 @@ namespace frmCovidGUI
             string strVaccine = edtVaccine.Text;
             bool bHadCovid = cbxHadCovid.Checked;
 
+            i.setArrays(i.ArraySize + 1);
             i.AddPatient(strID, strMedAid, strFirstName, strSurname, strRefDoc, cBloodType, strAllergies, bHadCovid, strVaccine);
         }
     }

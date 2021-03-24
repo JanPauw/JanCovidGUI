@@ -38,16 +38,16 @@ namespace frmCovidGUI
         private static string[] strVaccine;
         #endregion
 
-        #region Get Patient Info
-        public string[] StrID { get => strID; }
-        public string[] StrMedAid { get => strMedAid; }
-        public string[] StrName { get => strName; }
-        public string[] StrSurname { get => strSurname; }
-        public string[] StrRefDoc { get => strRefDoc; }
-        public char[] CBloodType { get => cBloodType; }
-        public string[] StrAllergies { get => strAllergies; }
-        public bool[] BHasCovid { get => bHasCovid; }
-        public string[] StrVaccine { get => strVaccine; }
+        #region Set and Get Patient Info
+        public string[] StrID { get => strID; set => strID = value; }
+        public string[] StrMedAid { get => strMedAid; set => strMedAid = value; }
+        public string[] StrName { get => strName; set => strName = value; }
+        public string[] StrSurname { get => strSurname; set => strSurname = value; }
+        public string[] StrRefDoc { get => strRefDoc; set => strRefDoc = value; }
+        public char[] CBloodType { get => cBloodType; set => cBloodType = value; }
+        public string[] StrAllergies { get => strAllergies; set => strAllergies = value; }
+        public bool[] BHasCovid { get => bHasCovid; set => bHasCovid = value; }
+        public  string[] StrVaccine { get => strVaccine; set => strVaccine = value; }
         #endregion
 
         #region Set Array's Size
