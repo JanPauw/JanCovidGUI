@@ -88,6 +88,7 @@ namespace frmCovidGUI
             // 
             // pnlAddHospital
             // 
+            this.pnlAddHospital.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlAddHospital.Controls.Add(this.cbxType);
             this.pnlAddHospital.Controls.Add(this.btnAddHospital);
             this.pnlAddHospital.Controls.Add(this.lblHospitalName);
@@ -185,6 +186,7 @@ namespace frmCovidGUI
             // 
             // pnlAddPatient
             // 
+            this.pnlAddPatient.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pnlAddPatient.Controls.Add(this.btnAddPatient);
             this.pnlAddPatient.Controls.Add(this.cbxHadCovid);
             this.pnlAddPatient.Controls.Add(this.edtBloodType);
@@ -359,6 +361,7 @@ namespace frmCovidGUI
             // 
             // edtHospitalInfo
             // 
+            this.edtHospitalInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.edtHospitalInfo.Controls.Add(this.label5);
             this.edtHospitalInfo.Controls.Add(this.edtHosTypeOutput);
             this.edtHospitalInfo.Controls.Add(this.lblPatientInfo);
