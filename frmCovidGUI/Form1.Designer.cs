@@ -29,7 +29,6 @@ namespace frmCovidGUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblMainTitle = new System.Windows.Forms.Label();
             this.pnlAddHospital = new System.Windows.Forms.Panel();
             this.cbxType = new System.Windows.Forms.ComboBox();
             this.btnAddHospital = new System.Windows.Forms.Button();
@@ -62,29 +61,25 @@ namespace frmCovidGUI
             this.edtHospitalInfo = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.edtHosTypeOutput = new System.Windows.Forms.TextBox();
-            this.lblPatientInfo = new System.Windows.Forms.Label();
             this.edtHosNameOutput = new System.Windows.Forms.TextBox();
-            this.lbxPatientInfo = new System.Windows.Forms.ListBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.edtHosAddressOutput = new System.Windows.Forms.TextBox();
             this.edtHosProvinceOutput = new System.Windows.Forms.TextBox();
+            this.lbxPatientInfo = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
+            this.lblAddHospital = new System.Windows.Forms.Label();
+            this.lblHosInfo = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.pnlAddHospital.SuspendLayout();
             this.pnlAddPatient.SuspendLayout();
             this.edtHospitalInfo.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // lblMainTitle
-            // 
-            this.lblMainTitle.AutoSize = true;
-            this.lblMainTitle.Location = new System.Drawing.Point(12, 9);
-            this.lblMainTitle.Name = "lblMainTitle";
-            this.lblMainTitle.Size = new System.Drawing.Size(138, 15);
-            this.lblMainTitle.TabIndex = 0;
-            this.lblMainTitle.Text = "Covid-19 Vaccine Tracker";
             // 
             // pnlAddHospital
             // 
@@ -98,7 +93,7 @@ namespace frmCovidGUI
             this.pnlAddHospital.Controls.Add(this.edtHosProvinceInput);
             this.pnlAddHospital.Controls.Add(this.edtHosAddressInput);
             this.pnlAddHospital.Controls.Add(this.lblHospitalProvince);
-            this.pnlAddHospital.Location = new System.Drawing.Point(12, 27);
+            this.pnlAddHospital.Location = new System.Drawing.Point(12, 44);
             this.pnlAddHospital.Name = "pnlAddHospital";
             this.pnlAddHospital.Size = new System.Drawing.Size(320, 224);
             this.pnlAddHospital.TabIndex = 1;
@@ -205,7 +200,7 @@ namespace frmCovidGUI
             this.pnlAddPatient.Controls.Add(this.edtPName);
             this.pnlAddPatient.Controls.Add(this.lblPName);
             this.pnlAddPatient.Controls.Add(this.lblPSurname);
-            this.pnlAddPatient.Location = new System.Drawing.Point(12, 257);
+            this.pnlAddPatient.Location = new System.Drawing.Point(12, 306);
             this.pnlAddPatient.Name = "pnlAddPatient";
             this.pnlAddPatient.Size = new System.Drawing.Size(320, 224);
             this.pnlAddPatient.TabIndex = 2;
@@ -324,6 +319,7 @@ namespace frmCovidGUI
             // 
             this.edtPID.Location = new System.Drawing.Point(10, 72);
             this.edtPID.Name = "edtPID";
+            this.edtPID.PlaceholderText = "Hint";
             this.edtPID.Size = new System.Drawing.Size(150, 23);
             this.edtPID.TabIndex = 1;
             // 
@@ -364,17 +360,15 @@ namespace frmCovidGUI
             this.edtHospitalInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.edtHospitalInfo.Controls.Add(this.label5);
             this.edtHospitalInfo.Controls.Add(this.edtHosTypeOutput);
-            this.edtHospitalInfo.Controls.Add(this.lblPatientInfo);
             this.edtHospitalInfo.Controls.Add(this.edtHosNameOutput);
-            this.edtHospitalInfo.Controls.Add(this.lbxPatientInfo);
             this.edtHospitalInfo.Controls.Add(this.label4);
             this.edtHospitalInfo.Controls.Add(this.label1);
             this.edtHospitalInfo.Controls.Add(this.label3);
             this.edtHospitalInfo.Controls.Add(this.edtHosAddressOutput);
             this.edtHospitalInfo.Controls.Add(this.edtHosProvinceOutput);
-            this.edtHospitalInfo.Location = new System.Drawing.Point(338, 27);
+            this.edtHospitalInfo.Location = new System.Drawing.Point(338, 44);
             this.edtHospitalInfo.Name = "edtHospitalInfo";
-            this.edtHospitalInfo.Size = new System.Drawing.Size(320, 454);
+            this.edtHospitalInfo.Size = new System.Drawing.Size(320, 224);
             this.edtHospitalInfo.TabIndex = 3;
             this.edtHospitalInfo.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -395,15 +389,6 @@ namespace frmCovidGUI
             this.edtHosTypeOutput.Size = new System.Drawing.Size(301, 23);
             this.edtHosTypeOutput.TabIndex = 7;
             // 
-            // lblPatientInfo
-            // 
-            this.lblPatientInfo.AutoSize = true;
-            this.lblPatientInfo.Location = new System.Drawing.Point(9, 240);
-            this.lblPatientInfo.Name = "lblPatientInfo";
-            this.lblPatientInfo.Size = new System.Drawing.Size(115, 15);
-            this.lblPatientInfo.TabIndex = 8;
-            this.lblPatientInfo.Text = "Hospital Patient Info";
-            // 
             // edtHosNameOutput
             // 
             this.edtHosNameOutput.Location = new System.Drawing.Point(9, 31);
@@ -411,15 +396,6 @@ namespace frmCovidGUI
             this.edtHosNameOutput.ReadOnly = true;
             this.edtHosNameOutput.Size = new System.Drawing.Size(301, 23);
             this.edtHosNameOutput.TabIndex = 3;
-            // 
-            // lbxPatientInfo
-            // 
-            this.lbxPatientInfo.FormattingEnabled = true;
-            this.lbxPatientInfo.ItemHeight = 15;
-            this.lbxPatientInfo.Location = new System.Drawing.Point(9, 258);
-            this.lbxPatientInfo.Name = "lbxPatientInfo";
-            this.lbxPatientInfo.Size = new System.Drawing.Size(301, 154);
-            this.lbxPatientInfo.TabIndex = 0;
             // 
             // label4
             // 
@@ -467,6 +443,15 @@ namespace frmCovidGUI
             this.edtHosProvinceOutput.Size = new System.Drawing.Size(301, 23);
             this.edtHosProvinceOutput.TabIndex = 7;
             // 
+            // lbxPatientInfo
+            // 
+            this.lbxPatientInfo.FormattingEnabled = true;
+            this.lbxPatientInfo.ItemHeight = 15;
+            this.lbxPatientInfo.Location = new System.Drawing.Point(9, 10);
+            this.lbxPatientInfo.Name = "lbxPatientInfo";
+            this.lbxPatientInfo.Size = new System.Drawing.Size(301, 199);
+            this.lbxPatientInfo.TabIndex = 0;
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -484,15 +469,68 @@ namespace frmCovidGUI
             this.textBox3.Size = new System.Drawing.Size(301, 23);
             this.textBox3.TabIndex = 9;
             // 
+            // lblAddHospital
+            // 
+            this.lblAddHospital.AutoSize = true;
+            this.lblAddHospital.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblAddHospital.Location = new System.Drawing.Point(12, 9);
+            this.lblAddHospital.Name = "lblAddHospital";
+            this.lblAddHospital.Size = new System.Drawing.Size(170, 32);
+            this.lblAddHospital.TabIndex = 4;
+            this.lblAddHospital.Text = "Add a Hospital";
+            // 
+            // lblHosInfo
+            // 
+            this.lblHosInfo.AutoSize = true;
+            this.lblHosInfo.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblHosInfo.Location = new System.Drawing.Point(338, 9);
+            this.lblHosInfo.Name = "lblHosInfo";
+            this.lblHosInfo.Size = new System.Drawing.Size(233, 32);
+            this.lblHosInfo.TabIndex = 4;
+            this.lblHosInfo.Text = "Hospital Information";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label6.Location = new System.Drawing.Point(12, 271);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(156, 32);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Add a Patient";
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.lbxPatientInfo);
+            this.panel1.Location = new System.Drawing.Point(338, 306);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(320, 224);
+            this.panel1.TabIndex = 5;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(338, 271);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(129, 32);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Patient List";
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(674, 495);
+            this.ClientSize = new System.Drawing.Size(672, 541);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.lblHosInfo);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.lblAddHospital);
             this.Controls.Add(this.edtHospitalInfo);
             this.Controls.Add(this.pnlAddPatient);
             this.Controls.Add(this.pnlAddHospital);
-            this.Controls.Add(this.lblMainTitle);
             this.Name = "frmMain";
             this.Text = "Vaccine Tracker";
             this.pnlAddHospital.ResumeLayout(false);
@@ -501,14 +539,13 @@ namespace frmCovidGUI
             this.pnlAddPatient.PerformLayout();
             this.edtHospitalInfo.ResumeLayout(false);
             this.edtHospitalInfo.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblMainTitle;
         private System.Windows.Forms.Panel pnlAddHospital;
         private System.Windows.Forms.Button btnAddHospital;
         private System.Windows.Forms.Label lblHospitalName;
@@ -522,7 +559,6 @@ namespace frmCovidGUI
         private System.Windows.Forms.Panel edtHospitalInfo;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox edtHosTypeOutput;
-        private System.Windows.Forms.Label lblPatientInfo;
         private System.Windows.Forms.TextBox edtHosNameOutput;
         private System.Windows.Forms.ListBox lbxPatientInfo;
         private System.Windows.Forms.Label label4;
@@ -551,6 +587,11 @@ namespace frmCovidGUI
         private System.Windows.Forms.Label lblAllergies;
         private System.Windows.Forms.CheckBox cbxHadCovid;
         private System.Windows.Forms.Button btnAddPatient;
+        private System.Windows.Forms.Label lblAddHospital;
+        private System.Windows.Forms.Label lblHosInfo;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label7;
     }
 }
 
