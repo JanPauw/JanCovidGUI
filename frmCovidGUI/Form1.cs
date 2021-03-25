@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace frmCovidGUI
 {
-    public partial class Form1 : Form
+    public partial class frmMain : Form
     {
         info Hospital = new info();
 
-        public Form1()
+        public frmMain()
         {
             InitializeComponent();
             pnlAddPatient.Visible = false;

@@ -1,7 +1,7 @@
 ﻿
 namespace frmCovidGUI
 {
-    partial class Form1
+    partial class frmMain
     {
         /// <summary>
         ///  Required designer variable.
@@ -484,7 +484,7 @@ namespace frmCovidGUI
             this.textBox3.Size = new System.Drawing.Size(301, 23);
             this.textBox3.TabIndex = 9;
             // 
-            // Form1
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -493,8 +493,8 @@ namespace frmCovidGUI
             this.Controls.Add(this.pnlAddPatient);
             this.Controls.Add(this.pnlAddHospital);
             this.Controls.Add(this.lblMainTitle);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "frmMain";
+            this.Text = "Vaccine Tracker";
             this.pnlAddHospital.ResumeLayout(false);
             this.pnlAddHospital.PerformLayout();
             this.pnlAddPatient.ResumeLayout(false);
